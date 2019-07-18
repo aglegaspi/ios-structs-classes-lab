@@ -3,7 +3,7 @@
 Fork and clone this repo. On your fork, answer and commit the follow questions. When you are finished, submit the link to your repo on Canvas.
 
 
-## Question 1
+## Question 1 √
 
 Given this class that represents a giant:
 
@@ -31,7 +31,33 @@ fred.weight = 999.2
 fred.homePlanet = "Mars"
 ```
 
+```swift 
+Answer: Only two will print because homePlanet is a const and it's value is immutable.
+```
+
 Fix the class definition for `Giant` in the space below so that it **does** work:
+
+```swift
+class Giant {
+    var name: String
+    var weight: Double
+    var homePlanet: String
+    
+    init(name: String, weight: Double, homePlanet: String) {
+        self.name = name
+        self.weight = weight
+        self.homePlanet = homePlanet
+    }
+}
+
+let fred = Giant(name: "Fred", weight: 340.0, homePlanet: "Earth")
+
+fred.name = "Brick"
+fred.weight = 999.2
+fred.homePlanet = "Mars"
+```
+
+
 
 
 ## Question 2
@@ -58,6 +84,10 @@ bilbo.homePlanet = "Saturn"
 Change the declaration of `bilbo` so that the above three lines of code **do** work:
 
 
+
+
+
+
 ## Question 3
 
 Consider this bit of code that uses the `Giant` class:
@@ -71,6 +101,10 @@ jason.name = "Jason"
 What will the value of `edgar.name` be after those three lines of code are run? What will the value of `jason.name` be? Why?
 
 
+
+
+
+
 ## Question 4
 
 Given this bit of code that uses the `Alien` struct:
@@ -82,6 +116,10 @@ charlesFromJupiter.homePlanet = "Jupiter"
 ```
 
 What will the value of `charles.homePlanet` be after the above code run? What about the value of `charlesFromJupiter.homePlanet`? Why?
+
+
+
+
 
 
 ## Question 5
@@ -118,6 +156,10 @@ joeAccount.withdraw(50.0)
 What will the value of `joeAccount.balance` be after the above code runs? What about the value of `joeOtherAccount.balance`? Why?
 
 
+
+
+
+
 ## Question 6
 
 a. Write a struct called `Person` that has 3 properties of type `String`: a first name, a last name and a middle name. Have the middle name be optional. Create 2 instances of a `Person`, one with a middle name and one without. Print one of their first names.
@@ -126,12 +168,20 @@ a. Write a struct called `Person` that has 3 properties of type `String`: a firs
 b. Write a method in `Person` called `fullName` that will return a formatted string of an instance's full name. Call this method on both the instances you created in part a.
 
 
+
+
+
+
 ## Question 7
 
 a. Create a class called `Book` that has properties `title`, `author` and `rating`, of type `String`, `String`, and `Double` respectively. Don't forget the initializer. Create some instances of `Book`.
 
 
 b. Add a method to `Book` called `isGood` that returns `true` if its rating is greater than or equal to 7
+
+
+
+
 
 
 ## Question 8
@@ -201,6 +251,10 @@ f. Add a type property called `count` that keeps track of how many dogs have bee
 `Dog.count //returns 5`
 
 
+
+
+
+
 ## Question 9
 
 There are three common scales that are used to measure temperature: Celsius, Fahrenheit, and Kelvin:
@@ -224,6 +278,10 @@ tenDegreesCelsius.fahrenheit //returns 50.0
 c. Give the `Celsius` struct a method called `isBelowFreezing` that returns a `Bool` (true if the temperature is below freezing).
 
 
+
+
+
+
 ## Question 10
 
 Create a struct called `RGBColor` that has 3 properties, `red`, `green`, `blue` that are all of type `Double`.
@@ -240,6 +298,10 @@ let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0
 ```
 
 
+
+
+
+
 ## Question 11
 
 a. Create a class called `Movie` that has properties for `name` (`String`), `year` (`Int`), `genre` (`String`), `cast` (`[String]`), and `description` (`String`). Create an instance of your `Movie` class
@@ -247,6 +309,10 @@ a. Create a class called `Movie` that has properties for `name` (`String`), `yea
 b. Create an instance method inside `Movie` called `blurb` that returns a formatted string describing the movie.
 
 Ex: "Borat came out in 2006. It was an odd film starring Sacha Baron Cohen as a man named Borat who was visiting America from Kazakhstan."
+
+
+
+
 
 
 ## Question 12
@@ -288,6 +354,10 @@ if let yearAsString = dieHardDict["year"] as? String {
  print("this didn't work")
 }
 ```
+
+
+
+
 
 ## Question 13
 
