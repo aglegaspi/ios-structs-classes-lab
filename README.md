@@ -60,7 +60,7 @@ fred.homePlanet = "Mars"
 
 
 
-## Question 2
+## Question 2 √
 
 Take a look at this struct that represents an alien:
 
@@ -81,8 +81,28 @@ bilbo.height = 1.42
 bilbo.homePlanet = "Saturn"
 ```
 
+```swift
+You will have erros because the instance is a const and is immutable.
+```
+
 Change the declaration of `bilbo` so that the above three lines of code **do** work:
 
+```swift
+    struct Alien {
+        var name: String
+        var height: Double
+        var homePlanet: String
+    }
+    var bilbo = Alien(name: "Bilbo", height: 1.67, homePlanet: "Venus")
+    
+    bilbo.name = "Jake"
+    bilbo.height = 1.42
+    bilbo.homePlanet = "Saturn"
+    
+    bilbo.name
+    bilbo.height
+    bilbo.homePlanet
+```
 
 
 
