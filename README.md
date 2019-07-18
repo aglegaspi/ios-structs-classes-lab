@@ -126,7 +126,7 @@ edgar.name will print "Jason" because once we update the property name it will u
 
 
 
-## Question 4
+## Question 4 √
 
 Given this bit of code that uses the `Alien` struct:
 
@@ -138,8 +138,10 @@ charlesFromJupiter.homePlanet = "Jupiter"
 
 What will the value of `charles.homePlanet` be after the above code run? What about the value of `charlesFromJupiter.homePlanet`? Why?
 
-
-
+```swift
+charles.homePlanet will return "Pluto"
+charlesFromJupiter.homePlanet will return "Jupiter"
+```
 
 
 
