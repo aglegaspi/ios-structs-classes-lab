@@ -145,7 +145,7 @@ charlesFromJupiter.homePlanet will return "Jupiter"
 
 
 
-## Question 5
+## Question 5 √
 
 Here's a struct that represents a bank account:
 
@@ -166,7 +166,26 @@ struct BankAccount {
 
 Does this code work? Why or why not?
 
+```swift
+it will not work because 'balance' is not being passed in the argument and that's what it's looking for. it's also looking for the function to mutate.
+```
+
 Fix the `BankAccount` struct so it does work.
+
+```swift
+struct BankAccount {
+    var owner: String
+    var balance: Double
+    
+    mutating func deposit(_ amount: Double) {
+        balance += amount
+    }
+    
+    mutating func withdraw(_ amount: Double) {
+        balance -= amount
+    }
+}
+```
 
 Given the code below (which should incorporate any fixes you made):
 
@@ -178,7 +197,11 @@ joeAccount.withdraw(50.0)
 
 What will the value of `joeAccount.balance` be after the above code runs? What about the value of `joeOtherAccount.balance`? Why?
 
+```swift
+joeAccount.balance returns 50.0
 
+joeOtherAccount.balance returns 100.0 because it is it's own instance and will not be affected.
+```
 
 
 
