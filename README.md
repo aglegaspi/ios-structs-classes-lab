@@ -108,7 +108,7 @@ Change the declaration of `bilbo` so that the above three lines of code **do** w
 
 
 
-## Question 3
+## Question 3 √
 
 Consider this bit of code that uses the `Giant` class:
 
@@ -120,8 +120,9 @@ jason.name = "Jason"
 
 What will the value of `edgar.name` be after those three lines of code are run? What will the value of `jason.name` be? Why?
 
-
-
+```swift
+edgar.name will print "Jason" because once we update the property name it will update the value for all instances using that property.
+```
 
 
 
