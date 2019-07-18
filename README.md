@@ -206,12 +206,52 @@ joeOtherAccount.balance returns 100.0 because it is it's own instance and will n
 
 
 
-## Question 6
+## Question 6 √
 
 a. Write a struct called `Person` that has 3 properties of type `String`: a first name, a last name and a middle name. Have the middle name be optional. Create 2 instances of a `Person`, one with a middle name and one without. Print one of their first names.
 
+```swift
+struct Person {
+    var firstname: String
+    var lastname: String
+    var middlename: String?
+}
+
+var alex = Person(firstname: "Alex", lastname: "Legaspi", middlename: nil)
+
+var oprah = Person(firstname: "Oprah", lastname: "Winfrey", middlename: "Gail")
+
+print(alex.firstname)
+print(oprah.firstname, oprah.middlename!)
+```
 
 b. Write a method in `Person` called `fullName` that will return a formatted string of an instance's full name. Call this method on both the instances you created in part a.
+
+```swift
+struct Person {
+    var firstname: String
+    var lastname: String
+    var middlename: String?
+    
+    func fullName() {
+        if let middlename = middlename {
+            print("\(firstname) \(middlename) \(lastname)")
+        } else {
+            print("\(firstname) \(lastname)")
+        }
+    }
+    
+}
+var alex = Person(firstname: "Alex", lastname: "Legaspi", middlename: nil)
+
+var oprah = Person(firstname: "Oprah", lastname: "Winfrey", middlename: "Gail")
+
+var jerry = Person(firstname: "Jerry", lastname: "Lopez", middlename: "Jose")
+
+jerry.fullName()
+alex.fullName()
+oprah.fullName()
+```
 
 
 
