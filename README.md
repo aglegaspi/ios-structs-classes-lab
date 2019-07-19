@@ -258,14 +258,44 @@ oprah.fullName()
 
 
 
-## Question 7
+## Question 7 √
 
 a. Create a class called `Book` that has properties `title`, `author` and `rating`, of type `String`, `String`, and `Double` respectively. Don't forget the initializer. Create some instances of `Book`.
 
+```swift
+    class Book {
+        var title: String
+        var author: String
+        var rating: Double
+        
+        init(booktitle: String, authorname: String, bookrating: Double) {
+            title = booktitle
+            author = authorname
+            rating = bookrating
+        }
+        
+        func isGood() -> Bool {
+            if self.rating > 7 {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+
+    var myFavBook = Book(booktitle: "Angels and Demos", authorname: "Dan Brown", bookrating: 10.0)
+
+    print(myFavBook.title)
+    print(myFavBook.author)
+    print(myFavBook.rating)
+```
 
 b. Add a method to `Book` called `isGood` that returns `true` if its rating is greater than or equal to 7
 
-
+```swift
+let isTheRatingGood = myFavBook.isGood()
+print(isTheRatingGood)
+```
 
 
 
@@ -382,6 +412,32 @@ let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0
  ["red": 0.2, "green": 0.2, "blue": 0.5],
  ["red": 0.5, "green": 0.1, "blue": 0.9],]
 ```
+
+```swift
+ let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0],
+ ["red": 0.0, "green": 1.0, "blue": 0.0],
+ ["red": 0.0, "green": 0.0, "blue": 1.0],
+ ["red": 0.6, "green": 0.9, "blue": 0.0],
+ ["red": 0.2, "green": 0.2, "blue": 0.5],
+ ["red": 0.5, "green": 0.1, "blue": 0.9],]
+
+struct RGBColor {
+    var red: Double
+    var green: Double
+    var blue: Double
+}
+var rgbArray: [RGBColor] = []
+
+for dict in colorDictArray {
+    let valueR = dict["red"]
+    let valueG = dict["green"]
+    let valueB = dict["blue"]
+    
+    rgbArray.append(RGBColor(red: valueR!,green: valueG!,blue: valueB!))
+}
+print(rgbArray)
+```
+
 
 
 
