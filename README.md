@@ -300,11 +300,46 @@ print(isTheRatingGood)
 
 
 
-## Question 8
+## Question 8 √
 
 ```swift
 class Dog {
-
+    var name: String
+    var breed: String
+    var mood: String
+    var hungry: Bool
+    static var count = 0
+    
+    init(name: String, breed: String, mood: String, hungry: Bool) {
+        self.name = name
+        self.breed = breed
+        self.mood = mood
+        self.hungry = hungry
+        Dog.count += 1
+    }
+    
+    func playFetch() {
+        self.mood = "playful"
+        self.hungry = true
+        print("Ruff!")
+    }
+    
+    func feed() {
+        if self.hungry == true {
+            print("Woof!")
+            self.hungry = false
+        } else {
+            print("The dog doesn't look hungry")
+        }
+    }
+        
+    func toString() -> String {
+        return """
+        Name: \(name)
+        Breed: \(breed)
+        Mood: \(mood)
+        """
+    }
 }
 ```
 
@@ -398,7 +433,7 @@ c. Give the `Celsius` struct a method called `isBelowFreezing` that returns a `B
 
 
 
-## Question 10
+## Question 10 √
 
 Create a struct called `RGBColor` that has 3 properties, `red`, `green`, `blue` that are all of type `Double`.
 
